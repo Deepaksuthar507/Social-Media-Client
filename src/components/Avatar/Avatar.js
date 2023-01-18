@@ -1,0 +1,12 @@
+import React from "react";
+import userImg from "../../asset/user.png";
+import "./Avatar";
+function Avatar({ src }) {
+  return (
+    <div className="Avatar">
+      <img src={src ? src : userImg} alt="user Avatar" />
+    </div>
+  );
+}
+
+export default Avatar;
