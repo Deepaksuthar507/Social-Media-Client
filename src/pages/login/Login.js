@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Login.scss";
-import { KEY_ACCESS_TOKEN, setItem } from "../../utils/localStoragemanager";
+import { KEY_ACCESS_TOKEN, setItem } from "../../utils/localStorageManager";
 import { axiosClient } from "../../utils/axiosClient";
+import "./Login.scss";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -12,11 +12,12 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const result = await axiosClient.post("/auth/login", {
+      const response = await axiosClient.post("/auth/login", {
         email,
         password,
       });
-      setItem(KEY_ACCESS_TOKEN, result.accessToken);
+      console.log(response);
+      setItem(KEY_ACCESS_TOKEN, response.result.accessToken);
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -42,7 +43,6 @@ function Login() {
             id="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-
           <input type="submit" className="submit" />
         </form>
         <p className="subheading">

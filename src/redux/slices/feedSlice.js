@@ -2,12 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { axiosClient } from "../../utils/axiosClient";
 import { likeAndUnlikePost } from "./postsSlice";
 
-export const getFeedData = createAsyncThunk("user/getFeedData", async () => {
+export const getFeedData = createAsyncThunk("/user/getFeedData", async () => {
   try {
     const response = await axiosClient.get("/user/getFeedData");
-    console.log("userProfile", response);
     return response.result;
   } catch (error) {
+    console.log(error);
     return Promise.reject(error);
   }
 });

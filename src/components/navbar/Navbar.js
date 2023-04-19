@@ -6,7 +6,7 @@ import { BiLogOut } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 // import { setLoading } from "../redux/slices/appConfigSlice";
 import { axiosClient } from "../../utils/axiosClient";
-import { KEY_ACCESS_TOKEN, removeItem } from "../../utils/localStoragemanager";
+import { KEY_ACCESS_TOKEN, removeItem } from "../../utils/localStorageManager";
 
 function Navbar() {
   const navigate = useNavigate();

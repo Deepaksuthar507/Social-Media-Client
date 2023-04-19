@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getFeedData } from "../../redux/slices/feedSlice";
 import Follower from "../Follower/Follower";
 import Post from "../post/Post";
 import "./Feed.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { getFeedData } from "../../redux/slices/feedSlice";
 
 function Feed() {
   const dispatch = useDispatch();
   const feedData = useSelector((state) => state.feedDataReducer.feedData);
+  console.log("feedData", feedData);
 
   useEffect(() => {
     dispatch(getFeedData());
