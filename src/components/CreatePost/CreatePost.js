@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Avatar from "../Avatar/Avatar";
-import "./CreatePost.scss";
-import backgroundDummyImg from "../../asset/user.png";
 import { BsCardImage } from "react-icons/bs";
 import { axiosClient } from "../../utils/axiosClient";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoading } from "../../redux/slices/appConfigSlice";
 import { getUserProfile } from "../../redux/slices/postsSlice";
+import "./CreatePost.scss";
 
 function CreatePost() {
   const [postImg, setPostImg] = useState("");

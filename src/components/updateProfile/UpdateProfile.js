@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./UpdateProfile.scss";
-import "./UpdateProfile.scss";
+
 import dummyUserImg from "../../asset/user.png";
 import { useSelector, useDispatch } from "react-redux";
 import { setLoading, updateMyProfile } from "../../redux/slices/appConfigSlice";
+import "./UpdateProfile.scss";
 
 function UpdateProfile() {
   const myProfile = useSelector((state) => state.appConfigReducer.myProfile);

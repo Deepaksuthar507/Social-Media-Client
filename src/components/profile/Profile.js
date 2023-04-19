@@ -14,9 +14,9 @@ function Profile() {
   const userProfile = useSelector((state) => state.postsReducer.userProfile);
   const myProfile = useSelector((state) => state.appConfigReducer.myProfile);
   const feedData = useSelector((state) => state.feedDataReducer.feedData);
-  const dispatch = useDispatch();
   const [isMyProfile, setIsMyProfile] = useState(false);
   const [isFollowing, setIsFollowing] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(

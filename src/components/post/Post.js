@@ -1,12 +1,12 @@
 import React from "react";
 import Avatar from "../Avatar/Avatar";
-import "./Post.scss";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { likeAndUnlikePost } from "../../redux/slices/postsSlice";
 import { useNavigate } from "react-router";
 import { showToast } from "../../redux/slices/appConfigSlice";
 import { TOAST_SUCCESS } from "../../App";
+import "./Post.scss";
 
 function Post({ post }) {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ function Post({ post }) {
         <h4>{post.owner?.name}</h4>
       </div>
       <div className="content">
-        <img src={post?.image?.url} alt="" />
+        <img src={post?.image?.url} alt="post_img" />
       </div>
       <div className="footer">
         <div className="like" onClick={handlePostLiked}>
