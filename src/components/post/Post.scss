@@ -7,9 +7,52 @@
     .heading {
         display: flex;
         align-items: center;
-        gap: 20px;
         height: 60px;
-        padding: 20px;
+        padding-inline: 20px;
+    
+        
+        .left-part{
+            display: flex;
+            gap: 20px;
+            
+            
+        }
+        .optn-icon {
+           
+        }
+        .optn-box{
+           
+            width: 100px;
+            position: relative;
+            top:30px;
+            left:20px;
+            background-color: rgba(211, 211, 211, 0.479);
+            border-radius: 10px;
+           
+                    
+        }
+        .editOption{
+           display: none;
+            color:rgba(211, 211, 211, 0) ;     
+            }
+            .editOptionOpen  {
+                display:flex;
+                flex-direction: column;
+                padding: 10px;
+                gap: 10px;
+                font-size: 2rem;
+               p{
+                color: rgba(0, 0, 0, 0.986);
+                cursor: pointer;
+               }
+
+               
+                
+               
+
+            }
+        
+        
     }
     .content {
         height: 400px;

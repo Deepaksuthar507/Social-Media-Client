@@ -42,7 +42,7 @@ const postsSlice = createSlice({
         const index = state?.userProfile?.posts?.findIndex(
           (item) => item._id === post._id
         );
-        console.log("postslice", index);
+        // console.log("postslice", index);
         if (index != undefined && index != -1) {
           state.userProfile.posts[index] = post;
         }
