@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import dummyUserImg from "../../asset/user.png";
 import { useSelector, useDispatch } from "react-redux";
 import { setLoading, updateMyProfile } from "../../redux/slices/appConfigSlice";
