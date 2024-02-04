@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { axiosClient } from "../../utils/axiosClient";
 import "./Signup.scss";
 function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate()
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -17,6 +19,7 @@ function Signup() {
         password,
       });
       console.log(result);
+      navigate(-1)
     } catch (error) {
       console.log(error);
     }
@@ -48,8 +51,8 @@ function Signup() {
             id="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-        </form>
         <input type="submit" className="submit" />
+        </form>
 
         <p className="subheading">
           Already have an account? <Link to="/login">Log In</Link>
